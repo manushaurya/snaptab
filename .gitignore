@@ -1,0 +1,19 @@
+# web-ext build/sign output
+web-ext-artifacts/
+
+# Signed/packaged extension files (build outputs, not source)
+*.xpi
+*.zip
+
+# Editor/OS cruft
+.DS_Store
+*.swp
+
+# Your actual snapshot data (personal browsing data — don't commit it)
+snaptab/
+tab-snapshots/  # legacy folder name from an earlier build
+*.snapshot.json
+
+# Python
+__pycache__/
+*.pyc

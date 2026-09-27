@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>SnapTab</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      width: 240px;
+      padding: 12px;
+      color: #1c1c1c;
+    }
+    h1 {
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f5f5f5;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background: #eaeaea;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    #status {
+      margin-top: 8px;
+      font-size: 12px;
+      min-height: 32px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>SnapTab</h1>
+
+  <label><input type="checkbox" id="includeTitles" /> Include tab titles</label>
+  <label><input type="checkbox" id="onlyCurrentWindow" /> Current window only</label>
+
+  <button id="saveBtn">Save Snapshot Now</button>
+
+  <div id="status"></div>
+
+  <script src="webext-compat.js"></script>
+  <script src="snapshot-core.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

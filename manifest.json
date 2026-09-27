@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "SnapTab",
+  "version": "1.0.0",
+  "description": "Save a JSON snapshot of all open tab URLs with a timestamp to your local disk.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": [
+    "tabs",
+    "downloads",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    },
+    "default_title": "Save Snapshot — SnapTab",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "save-snapshot": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S"
+      },
+      "description": "Save a snapshot of all open tabs"
+    }
+  },
+  "background": {
+    "scripts": ["webext-compat.js", "snapshot-core.js", "background.js"],
+    "persistent": false
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "snaptab@manu.local",
+      "strict_min_version": "78.0"
+    }
+  }
+}
